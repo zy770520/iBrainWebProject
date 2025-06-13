@@ -1,0 +1,29 @@
+//boxflex
+@mixin dis_flex() {
+    display: flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+}
+
+@mixin boxflex($value: 1) {
+    box-flex: $value;
+    flex: $value;
+    -moz-box-flex: $value;
+    -webkit-box-flex: $value;
+    -webkit-flex: $value;
+    -moz-flex: $value;
+}
+@mixin justify($value: space-between) {
+    justify-content: $value;
+    -webkit-justify-content: $value;
+    -moz-justify-content: $value;
+}
+@mixin align-items($value: center) {
+    align-items: $value;
+    -webkit-align-items: $value;
+    -moz-align-items: $value;
+}

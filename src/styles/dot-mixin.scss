@@ -1,0 +1,14 @@
+@mixin dot($size, $color, $marginRight) {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: $color;
+    margin-right: $marginRight;
+    vertical-align: middle;
+  }
+}

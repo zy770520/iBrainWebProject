@@ -1,0 +1,10 @@
+.el-range-editor.is-active, .el-range-editor.is-active:hover, .el-select .el-input.is-focus .el-input__inner,
+.el-input.is-active .el-input__inner, .el-input__inner:focus {
+    border-color: #ffb754!important;
+}
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active,
+.el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):hover,
+.el-tabs__item.is-active,
+.el-tabs__item:hover {
+    color: #ffb754!important;
+}

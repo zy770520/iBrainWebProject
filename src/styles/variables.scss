@@ -1,0 +1,224 @@
+/* stylelint-disable */
+@charset "utf-8";
+//框架默认主题色
+$base-color-default: #2f54eb;
+//默认层级
+$base-z-index: 999;
+//横向布局纵向布局时菜单背景色
+$base-menu-background: #2f3447;
+$base-dark-title-color: #333333;
+//菜单文字颜色
+$base-menu-color: #939daf;
+//菜单选中文字颜色
+$base-menu-color-active: hsla(0, 0%, 100%, 0.95);
+//菜单选中背景色
+$base-menu-background-active: $base-color-default;
+//标题颜色
+$base-title-color: #fff;
+//字体大小配置
+$base-font-size-small: 12px;
+$base-font-size-default: 14px;
+$base-font-size-big: 16px;
+$base-font-size-bigger: 18px;
+$base-font-size-large: 20px;
+$base-font-size-max: 22px;
+$base-font-size-xl: 24px;
+$base-font-color: #606266;
+$base-color-blue: $base-color-default;
+$base-color-white: #fff;
+$base-color-black: #000;
+$base-color-light-blue: #1890ff;
+$base-color-green: #37cd58;
+$base-color-yellow: #ffa200;
+$base-color-orange: #fa541c;
+$base-color-red: #e55555;
+$base-color-purple: #722ed1;
+$base-color-grey: #a1a1a1;
+$base-color-error: #ff0000;
+
+$base-color-gray: rgba(0, 0, 0, 0.65);
+$base-main-width: 1279px;
+$base-border-radius: 2px;
+$base-border-color: #dcdfe6;
+$base-background-second: #f7f8fa;
+$base-color-second-color: #666666;
+$base-light-border-color: #e8e8e8;
+$base-color-light-black: #282c34;
+$base-container-background-color: #f5f5f5;
+$base-button-border: #ebeef5;
+$base-table-th-bg-color: #ebeef5;
+
+$base-process-classify-count-bg-color: #eaecee;
+
+//表格表头背景颜色
+$base-table-column-bg-color: #f4f4f4;
+//表格border颜色
+$base-table-border-color: #ebebeb;
+//卡片布局背景色
+$base-card-view-bg-color: #f9fafc;
+//卡片边框颜色
+$base-card-border-color: #ebeef5;
+//卡片二级标题字体颜色
+$base-card-second-color: #888888;
+//卡片高
+// $base-card-height: 80px;
+$base-card-height: 52px;
+//卡片最小宽
+$base-card-min-width: 240px;
+
+//表单中子表孙表顶部信息背景颜色
+$base-form-table-header-bg-color: #eef2fb;
+//表单中子表孙表标题颜色
+$base-form-table-header-title-color: #222222;
+
+//流程中心流程分类展开收起图标背景色
+$base-process-classify-icon-bg: #f7f9fb;
+$base-process-classify-icon-border-color: $base-table-th-bg-color;
+
+//延迟处理任务字体颜色
+$base-delay-color: #aaaaaa;
+//特别关注图标颜色
+$base-gray-icon-color: #dedede;
+
+//基本圆角
+$base-radius: 4px;
+//100%宽
+$base-full-width: 100%;
+//100%高度
+$base-full-height: 100%;
+$base-min-height: 60px;
+//输入框高度
+$base-input-height: 32px;
+//默认padding
+$base-padding: 20px;
+$base-margin: 20px;
+//默认阴影
+$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+//横向布局时top-bar、logo、一级菜单的高度
+$base-top-bar-height: 60px;
+//纵向布局时logo的高度
+$base-logo-height: 60px;
+//纵向布局时logo左边距
+$base-logo-padding-left: 0;
+//logo图标width
+$base-logo-icon-width: 30px;
+//logo图标height
+$base-logo-icon-height: 34px;
+//顶部nav-bar的高度
+$base-nav-bar-height: 60px;
+//顶部多标签页tabs-bar的高度
+$base-tabs-bar-height: 48px;
+//顶部多标签页tabs-bar中每一个item的高度
+$base-tabs-item-height: 35px;
+//纵向布局时一级菜单li高度
+$base-menu-height: 56px;
+//纵向布局时二级菜单li标签的高度
+$base-menu-item-height: 48px;
+//菜单li标签左边padding值
+$base-menu-item-padding-left: 20px;
+//纵向布局时左侧导航折叠时菜单icon左边距
+$base-menu-fold-icon-padding-left: 28px;
+//菜单li标签前面icon的右边距margin
+// $base-menu-item-margin-right: 11px;
+$base-menu-item-margin-right: 8px;
+//tabs-item选中时背景border-radius
+$base-tabs-item-border-radius: $base-radius;
+//content内容margin
+$base-content-margin: 24px;
+//内容border颜色
+$base-content-border-color: #e6e6e6;
+
+//app-main的高度
+$base-app-main-height: calc(
+  100vh - #{$base-nav-bar-height} - #{$base-tabs-bar-height} - #{$base-content-margin}*
+    2
+);
+//标签页鼠标移入时tabs-item的背景色
+$base-tabs-item-hover-bg: #f5f6f8;
+//水平导航模式时二级菜单选中背景色
+$base-sub-menu-active-bg: #dee2ff;
+
+//菜单背景margin
+$base-menu-bg-margin: 10px;
+//流程中心 流程分类宽
+$base-process-classify-width: 206px;
+
+//纵向布局时左侧导航未折叠时的宽度
+$base-left-menu-width: 208px;
+//纵向布局时左侧导航未折叠时右侧内容的宽度
+$base-right-content-width: calc(100% - #{$base-left-menu-width});
+//纵向布局时左侧导航已折叠时的宽度
+$base-left-menu-width-min: 70px;
+//纵向布局时左侧导航已折叠时右侧内容的宽度
+$base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
+//默认动画
+$base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s,
+  background 0s, color 0s, font-size 0s;
+//默认动画长
+$base-transition-time: 0.3s;
+
+:export {
+  //菜单文字颜色变量导出
+  menu-color: $base-menu-color;
+  //菜单选中文字颜色变量导出
+  menu-color-active: $base-menu-color-active;
+  //菜单背景色变量导出
+  menu-background: $base-menu-background;
+
+  //浅色主题风格背景色变量导出
+  light-menu-background: $base-color-white;
+  light-top-bar-background: $base-color-white;
+  light-container-background: $base-container-background-color;
+
+  //浅色主题风格菜单字体颜色变量导出
+  light-menu-color: $base-menu-color;
+  //浅色主题风格tabs字体颜色变量导出
+  light-tab-color: $base-color-second-color;
+  //浅色主题风格顶部右侧登录名和消息字体颜色变量导出
+  light-top-right-color: $base-color-second-color;
+  //浅色主题风格其他门户字体颜色变量导出
+  light-portal-color: $base-color-second-color;
+
+  //混搭主题风格背景色变量导出
+  mashup-menu-background: $base-color-light-black;
+  mashup-top-bar-background: $base-color-white;
+  mashup-container-background: $base-container-background-color;
+
+  //混搭主题风格菜单字体颜色变量导出
+  mashup-menu-color: $base-color-white;
+  //混搭主题风格tabs字体颜色变量导出
+  mashup-tab-color: $base-color-second-color;
+  //混搭主题风格顶部右侧登录名和消息字体颜色变量导出
+  mashup-top-right-color: $base-color-second-color;
+  //混搭主题风格其他门户字体颜色变量导出
+  mashup-portal-color: $base-color-second-color;
+
+  //深色主题风格背景色变量导出
+  dark-menu-background: $base-color-light-black;
+  dark-top-bar-background: $base-color-light-black;
+  dark-container-background: $base-color-black;
+
+  //深色主题风格菜单字体颜色变量导出
+  dark-menu-color: $base-color-white;
+  //深色主题风格tabs字体颜色变量导出
+  dark-tab-color: $base-color-white;
+  //深色主题风格顶部右侧登录名和消息字体颜色变量导出
+  dark-top-right-color: $base-color-white;
+  //深色主题风格其他门户字体颜色变量导出
+  dark-portal-color: $base-color-white;
+
+  //默认主题色变量导出
+  color-default: $base-color-default;
+  //红色主题变量导出
+  color-red: $base-color-red;
+  //橙色主题变量导出
+  color-orange: $base-color-orange;
+  //黄色主题变量导出
+  color-yellow: $base-color-yellow;
+  //绿色主题变量导出
+  color-green: $base-color-green;
+  //浅蓝色主题变量导出
+  color-light-blue: $base-color-light-blue;
+  //紫色主题变量导出
+  color-purple: $base-color-purple;
+}

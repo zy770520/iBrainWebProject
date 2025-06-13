@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+body.eip-front-theme-default {
+  @mixin container {
+    color: var(--themeColor) !important;
+  }
+  @mixin menu-active-color {
+    color: var(--themeColor) !important;
+  }
+  @mixin menu-hover {
+    &:hover {
+      @include menu-active-color;
+      background-color: unset !important;
+      .ht-fa-icon {
+        color: var(--themeColor);
+      }
+    }
+  }
+  //---------el覆盖 START-----------
+  @mixin el_border {
+    border-color: var(--themeColor);
+  }
+  @mixin el_background {
+    background: var(--themeColor);
+  }
+  @mixin el_container {
+    @include el_background;
+    @include el_border;
+  }
+
+  @mixin el_box_show {
+    box-shadow: -1px 0 0 0 var(--themeColor) !important;
+  }
+  .el-button--primary,
+  .el-switch.is-checked .el-switch__core,
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-pagination.is-background .el-pager li:not(.disabled).active,
+  .el-radio__input.is-checked .el-radio__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    @include el_container;
+  }
+  .el-button--text,
+  .el-checkbox__input.is-checked + .el-checkbox__label,
+  .el-loading-spinner .el-loading-text,
+  .el-loading-spinner i,
+  .el-radio__input.is-checked + .el-radio__label,
+  .el-cascader-node.in-active-path,
+  .el-cascader-node.is-selectable.in-checked-path,
+  .el-cascader-node.is-active,
+  .el-dropdown-menu__item:focus,
+  .el-dropdown-menu__item:not(.is-disabled):hover,
+  .el-tabs__item.is-active,
+  .el-upload--picture-card:hover,
+  .el-tabs__item:hover,
+  .el-upload:focus,
+  .el-radio-button__orig-radio:not(:checked) + .el-radio-button__inner:hover,
+  .el-button--default:not(.el-button--primary):active,
+  .el-button--default:not(.el-button--primary):hover,
+  .el-button--default:not(.el-button--primary):focus,
+  .el-tag:not(.el-tag--danger):not(.el-tag--success):not(.el-tag--info):not(.el-tag--warning) {
+    color: var(--themeColor);
+    background-color: transparent;
+  }
+  .el-checkbox__inner:hover,
+  .el-select .el-input.is-focus .el-input__inner,
+  .el-input__inner:focus,
+  .el-range-editor.is-active:hover,
+  .el-range-editor.is-active,
+  .el-upload--picture-card:hover,
+  .el-upload:focus,
+  .el-textarea__inner:focus,
+  .el-button--default:not(.el-button--primary):active,
+  .el-button--default:not(.el-button--primary):hover,
+  .el-button--default:not(.el-button--primary):focus,
+  .el-range-editor.is-active {
+    @include el_border;
+  }
+  .el-tabs__active-bar {
+    @include el_background;
+  }
+
+  .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    @include el_container;
+    @include el_box_show;
+  }
+  .el-button.is-disabled,
+  .el-button.is-disabled:hover,
+  .el-button.is-disabled:focus {
+    color: #c0c4cc;
+    border-color: $base-button-border;
+  }
+  .el-button--primary.is-disabled,
+  .el-button--primary.is-disabled:hover,
+  .el-button--primary.is-disabled:focus,
+  .el-button--primary.is-disabled:active {
+    background: rgba(var(--themeColorRgb), 0.5);
+    // border-color: rgba(var(--themeColorRgb), 0.5);
+    color: $base-color-white;
+  }
+
+  .el-button--primary.is-plain {
+    background: rgba(var(--themeColorRgb), 0.1);
+    border-color: rgba(var(--themeColorRgb), 0.3);
+    &:hover {
+      color: $base-color-white;
+      background: var(--themeColor);
+      border-color: var(--themeColor);
+    }
+  }
+
+  .el-button--danger.is-disabled,
+  .el-button--danger.is-disabled:hover,
+  .el-button--danger.is-disabled:focus,
+  .el-button--danger.is-disabled:active {
+    color: $base-color-white;
+  }
+  .el-checkbox__input.is-disabled.is-checked {
+    .el-checkbox__inner {
+      background: rgba(var(--themeColorRgb), 0.3);
+      border-color: rgba(var(--themeColorRgb), 0.3);
+      &::after {
+        border-color: $base-color-white;
+      }
+    }
+  }
+  //---------el覆盖 END-----------
+
+  @mixin active {
+    &:hover {
+      color: var(--themeColor) !important;
+    }
+
+    &.is-active {
+      background-color: rgba(var(--themeColorRgb), 0.2) !important;
+      // border-right: 2px solid $base-menu-background-active;
+      // border-radius: $base-radius;
+      // margin: 0 10px;
+      // background: linear-gradient(90deg, $base-color-default 0%, #4167FF 100%);
+      .ht-fa-icon {
+        color: var(--themeColor);
+      }
+    }
+  }
+  //二级菜单标识样式
+  @mixin submenu-icon-hover {
+    &:hover {
+      &::before {
+        border-color: var(--themeColor);
+      }
+    }
+  }
+  .logo-container-horizontal {
+    @include container;
+  }
+
+  // .logo-container-vertical {
+  //   @include container;
+  // }
+
+  //菜单样式
+  .el-menu {
+    // @include container;
+
+    .el-submenu__title {
+      @include menu-hover;
+    }
+
+    .el-menu-item {
+      @include menu-hover;
+    }
+    .el-submenu.is-active {
+      .sub-menu-title {
+        @include menu-active-color;
+        .ht-fa-icon {
+          @include menu-active-color;
+        }
+      }
+    }
+  }
+
+  .side-bar-container,
+  .Fold {
+    // @include container;
+
+    .el-menu-item {
+      @include active;
+    }
+  }
+  .top-bar-container {
+    @include container;
+
+    .app-main {
+      @include container;
+
+      .el-menu {
+        &--horizontal {
+          .el-submenu,
+          .el-menu-item {
+            &.is-active {
+              // background-color: $base-menu-background-active !important;
+            }
+          }
+
+          > .el-menu-item {
+            &.is-active {
+              // border-bottom: 3px solid $base-menu-background-active !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-bar-container {
+    background: $base-color-white;
+
+    .tabs-content {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: var(--themeColor) !important;
+            background-color: rgba(var(--themeColorRgb), 0.16) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .theme-bar-setting {
+    background: var(--themeColor) !important;
+  }
+  .process-classify {
+    .el-tree--highlight-current
+      .el-tree-node.is-current
+      > .el-tree-node__content {
+      background-color: rgba(var(--themeColorRgb), 0.16);
+    }
+  }
+}

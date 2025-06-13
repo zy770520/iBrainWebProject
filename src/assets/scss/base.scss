@@ -1,0 +1,136 @@
+/* 查询填报页面共用样式表 */
+
+.page-section,
+.page-section-info,
+.iBrain-section-approve{
+    height: 100%!important;
+
+    .el-date-editor{
+        width: 100%;
+        height: 32px;
+    }
+    .el-col.el-col-6{
+        height: 70px;
+    }
+
+    .el-radio__input.is-checked .el-radio__inner,
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner,
+    .el-checkbox__input.is-checked .el-checkbox__inner {
+        background-color: #178fd2;
+        border-color: #178fd2;
+    }
+
+    .el-form-item{
+
+        .el-form-item--mini{
+            .el-form-item__content{
+                line-height: 28px;
+            }
+            .iBrain-range-input{
+                height: 30px;
+                line-height: 28px;
+            }
+        }
+        .el-form-item--small{
+            .el-form-item__content{
+                line-height: 30px;
+            }
+            .iBrain-range-input{
+                height: 32px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    div.el-input-block{
+        &,
+        & .el-input__inner{
+            display: block;
+            cursor: text;
+            overflow: hidden;
+        }
+    }
+
+    .el-table{
+        .el-form-item{
+            margin: 0;
+            .el-form-item__error{
+                // position: static;
+            }
+        }
+    }
+
+    .el-upload{
+        text-align: left;
+    }
+
+    .el-tabs__item{
+        box-shadow: none!important;
+    }
+
+    .el-tabs.detailsBox{
+        .el-tabs__item{
+            height: 45px;
+            line-height: 44px;
+            &:hover {
+                color: #178fd2;
+                cursor: pointer;
+            }
+            &.is-active {
+                color: #178fd2;
+            }
+        }
+        .el-tabs__active-bar {
+            background-color: #178fd2;
+        }
+    }
+    .el-input {
+        &.right {
+            .el-input__inner {
+                text-align: right;
+            }
+        }
+    }
+}
+.el-radio{
+    .el-radio__inner {
+        border-radius: 2px;
+
+        input{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .el-radio__input.is-checked .el-radio__inner::after {
+        content: "";
+        border: 1px solid white;
+        border-top: transparent;
+        border-right: transparent;
+        text-align: center;
+        display: block;
+        position: absolute;
+        transform: rotate(-45deg);
+        border-radius: 0px;
+        background: none;
+        height: 3px;
+        left: 2px;
+        top: 3px;
+        width: 7px;
+    }
+}
+
+.el-dialog__wrapper.purchase-edit-dialog{
+    .el-dialog__body{
+        padding: 10px 24px 20px;
+
+        .el-form{
+            margin-top: 10px;
+            padding: 0;
+        }
+    }
+    .el-form-item{
+        margin-bottom: 10px;
+        height: 65px;
+    }
+}

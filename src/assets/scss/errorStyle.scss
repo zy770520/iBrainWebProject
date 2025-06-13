@@ -1,0 +1,134 @@
+::v-deep .el-table {
+  &.notTips{
+    .el-table__body-wrapper {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+  .el-table__body-wrapper {
+    overflow-y: visible;
+    overflow-x: auto;
+    padding-top: 22px;
+    margin-top: -22px;
+  }
+  th.el-table__cell{
+    z-index: 2;
+  }
+
+  .cell {
+    overflow: unset;
+
+    .el-form-item .el-form-item__content {
+      .el-form-item__error {
+        top: -26px;
+        right: -1px;
+        line-height: 20px;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .el-form-item__error:after {
+        content: "";
+        top: 26px;
+        right: 14px;
+        border-top: 4px solid #FFFFFF;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+      }
+    }
+
+  }
+
+  .el-tooltip {
+    overflow: hidden;
+  }
+}
+
+::v-deep .el-form-item {
+
+  .el-form-item__content {
+    .el-input--suffix .el-input__clear {}
+
+    .el-input--suffix {
+      pointer-events: all;
+    }
+
+    .el-input--suffix .el-input__validateIcon {
+      position: absolute;
+      top: -23px;
+      right: 4px;
+      background: #e55555;
+      color: white;
+      width: 16px;
+      height: 16px;
+      border-radius: 20px;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+      pointer-events: all;
+      cursor: pointer;
+    }
+
+    .el-input--suffix .el-input__validateIcon.el-icon-circle-close:hover {}
+
+    .el-input--suffix .el-input__validateIcon.el-icon-circle-check {
+      display: none;
+    }
+
+    .el-input--suffix .el-input__validateIcon:before {
+      position: absolute;
+      font-size: 20px;
+      top: -6px;
+      right: -2px;
+    }
+
+    .el-form-item__error {
+      position: absolute;
+      top: -15px;
+      // top: -38px;
+      right: -1px;
+      line-height: 24px;
+      background: #FFF;
+      box-shadow: 2px 4px 10px #c0bebe;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #333;
+      left: unset;
+      animation: hideAnimation 0s ease-in 5s forwards;
+      z-index: 2;
+    }
+
+    .el-form-item__error:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 32px;
+      right: 14px;
+      border-top: 6px solid #FFFFFF;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+
+    @keyframes hideAnimation {
+      to {
+        // width:0;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+::v-deep .el-form-item .el-form-item__content:hover {
+  .el-form-item__error {
+    // height: 24px;
+    // padding: 4px 10px;
+    display: inline-block;
+    animation: none;
+  }
+}
